@@ -7,7 +7,6 @@
 #include "CurveRotator.generated.h"
 
 // bad degrees interpolation, but ok for the sake of an exercise
-// also the factory is missing for now
 UCLASS()
 class EXERCISEFINALIZED_API UCurveRotator : public UCurveBase
 {

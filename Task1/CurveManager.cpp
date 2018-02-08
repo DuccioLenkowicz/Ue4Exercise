@@ -3,7 +3,6 @@
 UCurveManager::UCurveManager()
 {
 	PrimaryComponentTick.bCanEverTick = true;
-	VectorCurve = CreateDefaultSubobject<UCurveVector>(TEXT("Curve"));
 	Speed = 1.0f;
 	CurveIsLocal = true;
 	Loop = false;
@@ -17,7 +16,6 @@ void UCurveManager::BeginPlay()
 	float MinTime;
 	VectorCurve->GetTimeRange(MinTime, CurveDuration);
 }
-
 
 void UCurveManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
