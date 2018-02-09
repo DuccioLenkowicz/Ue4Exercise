@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Components/SceneComponent.h"
 #include "Curves/CurveVector.h"
 #include "CurveManager.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class EXERCISEFINALIZED_API UCurveManager : public UActorComponent
+class EXERCISEFINALIZED_API UCurveManager : public USceneComponent
 {
 	GENERATED_BODY()
 

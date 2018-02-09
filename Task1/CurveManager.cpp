@@ -34,15 +34,13 @@ void UCurveManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 
 	FVector CurveFrame = CurveScale * VectorCurve->GetVectorValue(ElapsedSeconds);
 
-	AActor * Owner = GetOwner();
-
 	if (CurveIsLocal)
 	{
-		Owner->SetActorRelativeLocation(CurveFrame, false, nullptr, ETeleportType::None);
+		SetRelativeLocation(CurveFrame, false, nullptr, ETeleportType::None);
 	}
 	else
 	{
-		Owner->SetActorLocation(CurveFrame, false);
+		SetWorldLocation(CurveFrame, false, nullptr, ETeleportType::None);
 	}
 }
 
